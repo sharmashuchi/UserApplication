@@ -6,7 +6,6 @@ import com.synchrony.userapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,8 +30,13 @@ public class UserService {
     }
 
     public String checkUserIdAvailable(String userId) {
-        Optional userExists = userRepository.findById(userId);
-        String message = userExists.isPresent()? "Id already used": "Id available";
+        Optional<User> userExists = userRepository.findById(userId);
+        String message = userExists.isPresent()? userExists.get().getUserId(): "Id available";
         return message;
+    }
+
+    public User getUserDetails(String userId) {
+        Optional<User> userExists = userRepository.findById(userId);
+        return userExists.isPresent()? userExists.get(): null;
     }
 }

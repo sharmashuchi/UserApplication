@@ -1,25 +1,29 @@
 package com.synchrony.userapp.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
 public class User {
 
     @Id
+    @Column(name="USER_ID")
     private String userId;
 
-    @Column(nullable = false)
+    @Column(name="USER_NAME",nullable = false)
     private String userName;
 
-    @Column(nullable = false)
+    @Column(name="PASSWORD",nullable = false)
     private String password;
 
+    @Column(name = "CREATED_ON")
     private Date createdOn;
+
+    @OneToMany(mappedBy="user",fetch= FetchType.LAZY,cascade = CascadeType.PERSIST)
+    private List<Image> image = new ArrayList<Image>();
 
     public User() {
     }

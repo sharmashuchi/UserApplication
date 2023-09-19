@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -19,8 +20,8 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/status")
-    String imgurStatus() {
-        return "Imgur is up";
+    String serviceStatus() {
+        return "Service is up";
     }
 
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
