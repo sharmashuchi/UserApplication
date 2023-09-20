@@ -2,39 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0cd1c0-8231-4d17-a536-aed2544bba15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestImages/000107506.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/controller/ImageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/domain/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/dto/DataDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/dto/ImageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/dto/ImgurDeleteImageResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/dto/ImgurResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/properties/ImageProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/repository/ImageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/config/RestTemplateConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/controller/ImageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/domain/Image.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/dto/DataDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/dto/ImageDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/dto/ImgurResponseDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/properties/ImageProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/repository/ImageRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/service/ImageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/dto/ResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/dto/ResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/properties/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/properties/ImageProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/repository/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/UserApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/UserApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/dto/ResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/dto/ResponseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/properties/ImageProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/properties/ImageProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/repository/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/repository/ImageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/synchrony/userapp/service/ImageService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,26 +105,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="58" key="#com.intellij.ide.util.MemberChooser" timestamp="1695151169350">
+    <state x="488" y="58" key="#com.intellij.ide.util.MemberChooser" timestamp="1695194421347">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="58" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1695151169350" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1695154451645">
+    <state x="488" y="58" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1695194421347" />
+    <state width="1323" height="306" key="GridCell.Tab.0.bottom" timestamp="1695195027953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1695154451645" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1695154451644">
+    <state width="1323" height="306" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1695195027953" />
+    <state width="1323" height="306" key="GridCell.Tab.0.center" timestamp="1695195027953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1695154451644" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1695154451644">
+    <state width="1323" height="306" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1695195027953" />
+    <state width="1323" height="306" key="GridCell.Tab.0.left" timestamp="1695195027952">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1695154451644" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1695154451644">
+    <state width="1323" height="306" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1695195027952" />
+    <state width="1323" height="306" key="GridCell.Tab.0.right" timestamp="1695195027953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1695154451644" />
+    <state width="1323" height="306" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1695195027953" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1695153701537">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -173,14 +149,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1695133389242" />
-    <state x="390" y="0" width="586" height="728" key="find.popup" timestamp="1695151131131">
+    <state x="390" y="0" width="586" height="728" key="find.popup" timestamp="1695194260447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="586" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1695151131131" />
+    <state x="390" y="0" width="586" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1695194260447" />
     <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1694885286414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1694885286414" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1695194215193">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1695194215193" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -197,7 +177,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java</url>
-          <line>132</line>
+          <line>146</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -227,27 +207,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java</url>
-          <line>118</line>
+          <line>132</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java</url>
-          <line>116</line>
+          <line>130</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java</url>
-          <line>130</line>
+          <line>144</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java</url>
-          <line>124</line>
+          <line>138</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/synchrony/userapp/service/ImageService.java</url>
-          <line>125</line>
+          <line>139</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

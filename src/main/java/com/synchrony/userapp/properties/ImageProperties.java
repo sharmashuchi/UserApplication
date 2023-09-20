@@ -6,6 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ImageProperties {
 
     private String uploadDir;
+    private String uploadUri;
+    private String deleteUri;
+    private String apiToken;
 
     public String getUploadDir() {
         return uploadDir;
@@ -15,4 +18,27 @@ public class ImageProperties {
         this.uploadDir = uploadDir;
     }
 
+    public String getUploadUri() {
+        return uploadUri;
+    }
+
+    public void setUploadUri(String uploadUri) {
+        this.uploadUri = uploadUri;
+    }
+
+    public String getDeleteUri() {
+        return deleteUri;
+    }
+
+    public void setDeleteUri(String deleteUri) {
+        this.deleteUri = deleteUri;
+    }
+
+    public String getApiToken() {
+        return apiToken;
+    }
+
+    public void setApiToken(String apiToken) {
+        this.apiToken = apiToken;
+    }
 }

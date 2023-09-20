@@ -10,5 +10,4 @@ public interface ImageRepository extends CrudRepository<Image, String> {
 
     List<Image> findByUser(User user);
     Image findByImageDeleteHash(String imageDeleteHash);
-    String deleteByImageDeleteHash(String imageDeleteHash);
 }

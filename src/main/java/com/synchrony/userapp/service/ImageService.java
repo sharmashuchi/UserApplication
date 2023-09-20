@@ -34,6 +34,12 @@ public class ImageService {
 
     private final Path imageLocation;
 
+    private String uploadUri;
+
+    private String deleteUri ;
+
+    private String accessToken;
+
     @Autowired
     RestTemplate restTemplate;
 
@@ -45,6 +51,14 @@ public class ImageService {
     public ImageService(ImageProperties imageProperties) throws Exception {
         this.imageLocation = Paths.get(imageProperties.getUploadDir())
                 .toAbsolutePath().normalize();
+        this.uploadUri = imageProperties.getUploadUri();
+        this.deleteUri = imageProperties.getDeleteUri();
+        this.accessToken = imageProperties.getApiToken();
+
+        System.out.println(imageLocation);
+        System.out.println(uploadUri);
+        System.out.println(deleteUri);
+        System.out.println(accessToken);
 
         try {
             Files.createDirectories(this.imageLocation);
@@ -71,13 +85,13 @@ public class ImageService {
             HttpHeaders headers = new HttpHeaders();
             //headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
             headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-            headers.setBearerAuth("6d3d95355faae1dbbc78f8e162cce5c1db78b742");
+            headers.setBearerAuth(this.accessToken);
             MultiValueMap<String, Object> form = new LinkedMultiValueMap<>();
             form.add("image", fsr);
             HttpEntity<MultiValueMap<String, Object>> entity = new HttpEntity<MultiValueMap<String, Object>>(form,headers);
 
             ImgurResponseDTO response= restTemplate.exchange(
-                    "https://api.imgur.com/3/upload", HttpMethod.POST, entity, ImgurResponseDTO.class).getBody();
+                    this.uploadUri, HttpMethod.POST, entity, ImgurResponseDTO.class).getBody();
             String imageId = response.getData().getId();
             String imageDeleteHash = response.getData().getDeleteHash();
             String imageLink = response.getData().getLink();
@@ -113,10 +127,10 @@ public class ImageService {
             String imageId = imageToDelete.getImageId();
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-            headers.setBearerAuth("6d3d95355faae1dbbc78f8e162cce5c1db78b742");
+            headers.setBearerAuth(this.accessToken);
             HttpEntity<MultiValueMap<String, Object>> entity = new HttpEntity<MultiValueMap<String, Object>>(null,headers);
 
-            ImgurDeleteImageResponseDTO response= restTemplate.exchange("https://api.imgur.com/3/image/{deleteHash}",
+            ImgurDeleteImageResponseDTO response= restTemplate.exchange(this.deleteUri,
                     HttpMethod.DELETE,
                     entity,
                     ImgurDeleteImageResponseDTO.class,
