@@ -9,7 +9,8 @@ import com.synchrony.userapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -43,31 +44,23 @@ public class ImageController {
     }
 
     @GetMapping
-    public ResponseEntity<ResponseDTO> getImageListForTheUser(@RequestParam String userId, @RequestParam String password) {
-        User user = userService.getUserDetails(userId);
+    public ResponseEntity<ResponseDTO> getImageListForTheUser() {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication()
+                .getPrincipal();
+        String userId = userDetails.getUsername();
         ResponseDTO response = new ResponseDTO();
-        //TODO: validate user id and password and throw error
-        if(user == null || !user.getPassword().equalsIgnoreCase(password)) {
-            //TODO: remove hard-coding
-            response.setResponseMessage("Incorrect credentials");
-            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-        }
-        List<ImageDTO> images = imageService.getImageForUser(user);
+        List<ImageDTO> images = imageService.getImageForUser(userService.getUserDetails(userId));
         response.setResponseMessage("Images fetched successfully");
         response.setImages(images);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @DeleteMapping
-    public ResponseEntity<ResponseDTO> deleteSelectedImageByHash(@RequestParam String userId, @RequestParam String password, @RequestParam String deleteHash) {
-        User user = userService.getUserDetails(userId);
+    public ResponseEntity<ResponseDTO> deleteSelectedImageByHash(@RequestParam String deleteHash) {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication()
+                .getPrincipal();
+        String userId = userDetails.getUsername();
         ResponseDTO response = new ResponseDTO();
-        //TODO: validate user id and password and throw error
-        if(user == null || !user.getPassword().equalsIgnoreCase(password)) {
-            //TODO: remove hard-coding
-            response.setResponseMessage("Incorrect credentials");
-            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-        }
         try {
             String imageId = imageService.deleteImageForUser(deleteHash);
             response.setResponseMessage("Image with id" + imageId+" deleted successfully");

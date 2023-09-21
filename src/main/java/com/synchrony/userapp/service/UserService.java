@@ -4,12 +4,18 @@ import com.synchrony.userapp.domain.User;
 import com.synchrony.userapp.dto.UserDTO;
 import com.synchrony.userapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
     @Autowired
     UserRepository userRepository;
@@ -38,5 +44,16 @@ public class UserService {
     public User getUserDetails(String userId) {
         Optional<User> userExists = userRepository.findById(userId);
         return userExists.isPresent()? userExists.get(): null;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
+        Optional<User> user = userRepository.findById(userId);
+        if (user.isPresent()) {
+            List<SimpleGrantedAuthority> roleList = new ArrayList<>();
+            return new org.springframework.security.core.userdetails.User(user.get().getUserId(), user.get().getPassword(), roleList);
+        } else {
+            throw new UsernameNotFoundException("User not found with username: " + userId);
+        }
     }
 }
